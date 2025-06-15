@@ -112,6 +112,53 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* 移动端安全区域适配 */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+}
+
+/* 移动端字体渲染优化 */
+@media (max-width: 768px) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* 移动端输入框优化 */
+  input[type="text"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+  
+  /* 防止移动端缩放 */
+  input, textarea, select, button {
+    font-size: 16px;
+  }
+}
+
+/* 横屏模式优化 */
+@media (max-width: 768px) and (orientation: landscape) {
+  .header {
+    padding: 12px 0 16px;
+  }
+  
+  .logo-text h1 {
+    font-size: 1.8rem;
+  }
+  
+  .logo-text p {
+    font-size: 0.9rem;
+  }
+  
+  .main {
+    padding: 20px 0;
+  }
+}
+
 /* 预加载动画 */
 @keyframes pulse {
   0%, 100% {
