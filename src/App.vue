@@ -1337,6 +1337,18 @@ onMounted(() => {
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
   }
   
+  /* 移动端分类按钮文字增强 */
+  .category-btn {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .category-btn:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
   /* 移动端标签样式优化 */
   .tag {
     font-weight: 700;
@@ -1384,11 +1396,42 @@ onMounted(() => {
     position: relative;
   }
   
+  /* 移动端未选中按钮样式 */
+  .category-btn {
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .category-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
   .category-btn.active {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     font-weight: 700;
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    border: 1px solid transparent;
+    text-shadow: none;
+  }
+  
+  /* 移动端分类数量标签优化 */
+  .category-btn .category-count {
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .category-btn.active .category-count {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
   
   /* 移动端滚动指示器 */
