@@ -771,27 +771,28 @@ onMounted(() => {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 50px;
   padding: 12px 24px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
-  color: rgba(255, 255, 255, 0.9);
+  color: #333;
 }
 
 .category-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.95);
+  color: #222;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .category-btn.active {
-  background: linear-gradient(45deg, #fff, #f8f9ff);
-  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
@@ -1339,14 +1340,16 @@ onMounted(() => {
   
   /* 移动端分类按钮文字增强 */
   .category-btn {
-    color: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
     font-weight: 600;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-shadow: none;
   }
   
   .category-btn:hover {
-    color: white;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.95);
+    color: #222;
   }
   
   /* 移动端标签样式优化 */
@@ -1398,17 +1401,17 @@ onMounted(() => {
   
   /* 移动端未选中按钮样式 */
   .category-btn {
-    background: rgba(255, 255, 255, 0.15);
-    color: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+    border: 1px solid rgba(255, 255, 255, 0.6);
     font-weight: 600;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
   }
   
   .category-btn:hover {
-    background: rgba(255, 255, 255, 0.25);
-    color: white;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.95);
+    color: #222;
+    text-shadow: none;
   }
   
   .category-btn.active {
@@ -1422,16 +1425,16 @@ onMounted(() => {
   
   /* 移动端分类数量标签优化 */
   .category-btn .category-count {
-    background: rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     font-weight: 700;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: none;
   }
   
   .category-btn.active .category-count {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.25);
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: none;
   }
   
   /* 移动端滚动指示器 */
